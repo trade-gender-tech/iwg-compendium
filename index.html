@@ -130,12 +130,15 @@
   #dataTable { min-width: 2300px; }
   thead tr { background: #2b2b2b; color: #fff; }
   thead th { padding: 10px 12px; text-align: left; font-weight: 600; font-size: 12px; white-space: nowrap; cursor: pointer; user-select: none; position: sticky; top: 0; z-index: 10; background: #2b2b2b; color: #fff; }
+  thead th:first-child { position: sticky; left: 0; z-index: 15; }
   thead th:hover { background: #404040; }
   thead th .sort-arrow { margin-left: 4px; opacity: 0.5; font-size: 10px; }
   thead th.sorted .sort-arrow { opacity: 1; color: #7eb8f5; }
   tbody tr.main-row { border-bottom: 1px solid #e8e8e8; }
   tbody tr.main-row:hover { background: #f2f2f2; }
   tbody tr.main-row td { padding: 10px 12px; vertical-align: top; }
+  tbody tr.main-row td:first-child { position: sticky; left: 0; z-index: 5; background: #fff; }
+  tbody tr.main-row:hover td:first-child { background: #f2f2f2; }
   .expand-btn { background: #E7653A; border: none; border-radius: 50%; width: 20px; height: 20px; color: #fff; font-size: 14px; font-weight: 700; text-align: center; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background 0.15s; padding: 0; }
   .expand-btn.open { background: #a04020; }
   .expand-btn.open::after { content: "−"; }
@@ -660,6 +663,7 @@
     .cell-truncate { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; white-space: normal; }
     tr.row-expanded .cell-truncate { display: block !important; -webkit-line-clamp: unset !important; overflow: visible !important; white-space: pre-wrap !important; }
     #dataTable.dataTable thead th { background: #2b2b2b !important; color: #fff !important; font-size: 12px; font-weight: 600; white-space: nowrap; padding: 10px 12px; border-bottom: none !important; position: sticky !important; top: 0 !important; z-index: 10 !important; }
+    #dataTable.dataTable thead th:first-child { position: sticky !important; left: 0 !important; z-index: 15 !important; }
     #dataTable.dataTable thead th.sorting::after,
     #dataTable.dataTable thead th.sorting_asc::after,
     #dataTable.dataTable thead th.sorting_desc::after { color: rgba(255,255,255,0.7); }
